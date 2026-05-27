@@ -85,13 +85,12 @@ The service principal needs **Contributor** (or a custom role with `Microsoft.Vi
 ### 3. Run
 
 ```bash
-uv run uvicorn main:app --reload
+uv run uvicorn backend.src.api.server:app --reload  
 ```
 
 - API: `http://localhost:8000`
 - Swagger UI: `http://localhost:8000/docs`
 - Health check: `http://localhost:8000/health`
-
 
 ---
 ## 🔬 Techniques Used
@@ -108,8 +107,17 @@ uv run uvicorn main:app --reload
 | **`load_dotenv(override=True)`** | `.env` wins over shell env vars. Predictable behavior across machines. |
 
 ---
-⚠️ Disclaimer
+## ⚠️ Disclaimer
+
 Built as a learning project to demonstrate end-to-end LLMOps patterns — agent orchestration, multimodal extraction, RAG, Azure auth, and observability. The compliance categories and severity levels are illustrative; this is not a substitute for legal review or a certified brand-safety service.
+
+---
+## 📚 References
+
+- [LangGraph documentation](https://langchain-ai.github.io/langgraph/)
+- [Azure Video Indexer REST API](https://learn.microsoft.com/en-us/azure/azure-video-indexer/)
+- [Azure AI Search vector retrieval](https://learn.microsoft.com/en-us/azure/search/vector-search-overview)
+- [DefaultAzureCredential authentication](https://learn.microsoft.com/en-us/python/api/overview/azure/identity-readme)
 ---
 
 *Built as part of an AI/ML engineering learning journey.*
